@@ -21,4 +21,4 @@ int main(){
   output(a,b,sum);
   return 0;
 
-}gd
+}
