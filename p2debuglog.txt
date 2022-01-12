@@ -1,11 +1,14 @@
-gcc -g p2original.c
- ./a.out
-enter a number 
-3
-enter a number 
-5
-the sum of 3 and 5 is 8 
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
  
+ gcc -g p2original.c;./a.out
+Enter a number
+5
+Enter a number
+7
+the sum of 5 and 7 is 12 
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -23,49 +26,24 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x7c5: file p2original.c, line 24.
+Breakpoint 1 at 0x7c5: file p2original.c, line 27.
 (gdb) r
 Starting program: /home/runner/pps-test1-sanjanaraghupathi-2/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p2original.c:24
-warning: Source file is more recent than executable.
-24    x=input();
-(gdb) s
-input () at p2original.c:3
-3   {
+Breakpoint 1, main () at p2original.c:27
+27    x=input();
 (gdb) n
-5     printf("enter a number");
+Enter a number
+5
+28    y=input();
 (gdb) n
-6     scanf("%d",&a);
-(gdb) n
-enter a number
-4
-7     return a;
-(gdb) n
-9   }
-(gdb) n
-main () at p2original.c:25
-25    y=input();
-(gdb) s
-input () at p2original.c:3
-3   {
-(gdb) n
-5     printf("enter a number");
-(gdb) n
-6     scanf("%d",&a);
-(gdb) n
-enter a number
+Enter a number
 7
-7     return a;
+29    z=add(x,y);
 (gdb) n
-9   }
+30    output(x,y,z);
 (gdb) n
-main () at p2original.c:26
-26    z=add(x,y);
+31    return 0;
 (gdb) n
-27    output(x,y,z);
-(gdb) n
-28    return 0;
-(gdb) n
-29  }(gdb) 
+32  }(gdb)
