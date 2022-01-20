@@ -1,4 +1,4 @@
- gdb a.out
+ gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -7,14 +7,59 @@ There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
 and "show warranty" for details.
 This GDB was configured as "x86_64-linux-gnu".
 Type "show configuration" for configuration details.
- 
- gcc -g p4original.c
- ./a.out
-enter the three numbers
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x7c5: file p2final.c, line 27.
+(gdb) r
+Starting program: /home/runner/pps-test1-sanjanaraghupathi-2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p2final.c:27
+27    x=input();
+(gdb) s
+input () at p2final.c:4
+4   {
+(gdb) n
+6     printf("Enter a number");
+(gdb) n
+7     scanf("%d",&a);
+(gdb) n
+Enter a number
 5
-6
+8     return a;
+(gdb) n
+9   }
+(gdb) n
+main () at p2final.c:28
+28    y=input();
+(gdb) s
+input () at p2final.c:4
+4   {
+(gdb) n
+6     printf("Enter a number");
+(gdb) n
+7     scanf("%d",&a);
+(gdb) n
+Enter a number
 7
-7 is the largest of the three
+8     return a;
+(gdb) n
+9   }
+(gdb) n
+main () at p2final.c:29
+29    z=add(x,y);
+(gdb) s
+add (a=5, b=7) at p2final.c:14
+ 
+ gcc -g p4final.c;./a.out
+enter the three numbers
+7
  
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
@@ -33,32 +78,66 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x7f3: file p4original.c, line 35.
+Breakpoint 1 at 0x7f3: file p4final.c, line 36.
 (gdb) r
 Starting program: /home/runner/pps-test1-sanjanaraghupathi-2/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p4original.c:35
-35    printf("enter the three numbers\n");
+Breakpoint 1, main () at p4final.c:36
+36    printf("enter the three numbers\n");
 (gdb) n
 enter the three numbers
-36    a=input();
+37    a=input();
+(gdb) s
+input () at p4final.c:28
+28  {
 (gdb) n
-5
-37    b=input();
+30    scanf("%d",&x);
 (gdb) n
-6
-38    c=input();
+57
+31    return x;
 (gdb) n
-7
-39    large=cmp(a,b,c);
+32  }
 (gdb) n
-40    printf("%d is the largest of the three\n",large);
+main () at p4final.c:38
+38    b=input();
+(gdb) s
+input () at p4final.c:28
+28  {
 (gdb) n
-7 is the largest of the three
-41  }(gdb) 
-__libc_start_main (main=0x558bdcc007eb <main>, argc=1, argv=0x7fffc9d48838, 
-    init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, 
-    stack_end=0x7fffc9d48828) at ../csu/libc-start.c:344
-344 ../csu/libc-start.c: No such file or directory.
-(gdb) 
+30    scanf("%d",&x);
+(gdb) n
+78
+31    return x;
+(gdb) n
+32  }
+(gdb) n
+main () at p4final.c:39
+39    c=input();
+(gdb) s
+input () at p4final.c:28
+28  {
+(gdb) n
+30    scanf("%d",&x);
+(gdb) n
+100
+31    return x;
+(gdb) n
+32  }
+(gdb) n
+main () at p4final.c:40
+40    large=cmp(a,b,c);
+(gdb) n
+41    printf("%d is the largest of the three\n",large);
+(gdb) n
+100 is the largest of the three
+42  }
+(gdb) p a
+$1 = 57
+(gdb) p b
+$2 = 78
+(gdb) p c
+$3 = 100
+(gdb) p large
+$4 = 100
+(gdb) n

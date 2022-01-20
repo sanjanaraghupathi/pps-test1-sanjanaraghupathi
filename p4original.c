@@ -13,15 +13,16 @@ int cmp(int a,int b,int c)
   }
 }
 else
-{
+ {
   if(b>c)
   {
     return b;
   }
-  else{
+  else
+  {
     return c;
   }
-}
+ }
 }
 int input()
 {

@@ -24,3 +24,19 @@ else
 }
 }
 }
+int input()
+{
+  int x;
+  scanf("%d",&x);
+  return x;
+}
+int main()
+{
+  int a,b,c,large;
+  printf("enter the three numbers\n");
+  a=input();
+  b=input();
+  c=input();
+  large=cmp(a,b,c);
+  printf("%d is the largest of the three\n",large);
+}
