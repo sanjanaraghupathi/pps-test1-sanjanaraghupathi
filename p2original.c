@@ -1,6 +1,6 @@
 #include<stdio.h>
 int input()
-//add two numbers using 4 functions
+
 {
   int a;
   printf("Enter a number");
