@@ -26,6 +26,6 @@ Breakpoint 1, main () at p0original.c:4
 my name is sanjana
 5   return 0;
 (gdb) n
-6    }(gdb) 
+6    }(gdb)
 
 
