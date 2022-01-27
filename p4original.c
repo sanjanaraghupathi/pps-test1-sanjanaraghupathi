@@ -4,10 +4,14 @@ int cmp(int a,int b,int c)
   if(a>b)
   {
     if(a>c)
-{
-    return a;
-  }
+
+  {
+     return a;
+     }
+  
+
   else
+
   {
     return c;
   }

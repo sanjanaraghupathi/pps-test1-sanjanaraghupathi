@@ -13,10 +13,10 @@ int sum_n(int n)
 }
 void output(int n,int sum)
 {
-  printf("1");
-  for(int f=2;f<n;f=f+1)
+  printf("0");
+  for(int i=1;i<n;i=i+1)
   {
-    printf("+%d",f);
+    printf("+%d",i);
   }
   printf("+%d is %d\n",n,sum);
 }
