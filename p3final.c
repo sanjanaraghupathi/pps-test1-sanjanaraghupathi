@@ -12,7 +12,6 @@
   
    *sum =a+b;
    
-   
 }
    void output(int a, int b, int sum)
 {
