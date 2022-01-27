@@ -7,4 +7,5 @@ int main()
    c=a+b;
    printf("add two numbers:%d\n",c);
    return 0;
+
 }
