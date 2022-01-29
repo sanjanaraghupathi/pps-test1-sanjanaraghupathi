@@ -1,18 +1,112 @@
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html
- 
- gcc -g p7original.c
- ./a.out
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x8f1: file p7original.c, line 35.
+(gdb) r
+Starting program: /home/runner/pps-test1-sanjanaraghupathi-2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p7original.c:35
+35  {
+(gdb) n
+37    n=input_array_size();
+(gdb) s
+input_array_size () at p7original.c:3
+3   {
+(gdb) n
+5     printf("enter the size of array:\n");
+(gdb) n
 enter the size of array:
-4
+6     scanf("%d",&k);
+(gdb) n
+7
+7     return k;
+(gdb) n
+8   }
+(gdb) n
+main () at p7original.c:38
+38    int a[n];
+(gdb) s
+39    array_input(n,a);
+(gdb) s
+array_input (n=7, a=0x7ffdca53a590) at p7original.c:11
+11    printf("enter the value\n");
+(gdb) n
 enter the value
-2
-4
-6
-3
-2+4+6+3=15
+12    for(int i=0;i<n;i++)
+(gdb) n
+14      scanf("%d",&a[i]);
+(gdb) n
+ 
+ 
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+ 
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x8f1: file p7original.c, line 35.
+(gdb) r
+Starting program: /home/runner/pps-test1-sanjanaraghupathi-2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p7original.c:35
+35  {
+(gdb) s
+37    n=input_array_size();
+(gdb) s
+input_array_size () at p7original.c:3
+3   {
+(gdb) n
+ 
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+ 
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -39,21 +133,144 @@ Breakpoint 1, main () at p7original.c:35
 35  {
 (gdb) n
 37    n=input_array_size();
+(gdb) s
+input_array_size () at p7original.c:3
+3   {
 (gdb) n
+ 
+ gcc -g p7final.c
+ ./a.out
 enter the size of array:
 4
+enter the value
+90
+89
+100
+908
+90+89+100+908=1187
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x8f1: file p7final.c, line 35.
+(gdb) r
+Starting program: /home/runner/pps-test1-sanjanaraghupathi-2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p7final.c:35
+35  {
+(gdb) n
+37    n=input_array_size();
+(gdb) s
+input_array_size () at p7final.c:3
+3   {
+(gdb) n
+5     printf("enter the size of array:\n");
+(gdb) n
+enter the size of array:
+6     scanf("%d",&k);
+(gdb) n
+4
+7     return k;
+(gdb) n
+8   }
+(gdb) n
+main () at p7final.c:38
 38    int a[n];
 (gdb) n
 39    array_input(n,a);
+(gdb) s
+array_input (n=4, a=0x7ffdd3b32ee0) at p7final.c:11
+11    printf("enter the value\n");
 (gdb) n
 enter the value
-2
-4
-6
-3
+12    for(int i=0;i<n;i++)
+(gdb) n
+14      scanf("%d",&a[i]);
+(gdb) n
+5
+12    for(int i=0;i<n;i++)
+(gdb) n
+14      scanf("%d",&a[i]);
+(gdb) n
+7
+12    for(int i=0;i<n;i++)
+(gdb) n
+14      scanf("%d",&a[i]);
+(gdb) n
+8
+12    for(int i=0;i<n;i++)
+(gdb) n
+14      scanf("%d",&a[i]);
+(gdb) n
+8
+12    for(int i=0;i<n;i++)
+(gdb) n
+16  }
+(gdb) n
+main () at p7final.c:40
 40    sum=sum_n_arrays(n,a);
+(gdb) s
+sum_n_arrays (n=4, a=0x7ffdd3b32ee0) at p7final.c:19
+19    int sum=0;
 (gdb) n
+20    for(int i=0;i<n;i++)
+(gdb) n
+22      sum=sum+a[i];
+(gdb) n
+20    for(int i=0;i<n;i++)
+(gdb) n
+22      sum=sum+a[i];
+(gdb) n
+20    for(int i=0;i<n;i++)
+(gdb) n
+22      sum=sum+a[i];
+(gdb) n
+20    for(int i=0;i<n;i++)
+(gdb) n
+22      sum=sum+a[i];
+(gdb) n
+20    for(int i=0;i<n;i++)
+(gdb) n 
+24    return sum;
+(gdb) n
+25  }
+(gdb) n
+main () at p7final.c:41
 41    output(n,a,sum);
+(gdb) s
+output (n=4, a=0x7ffdd3b32ee0, sum=28) at p7final.c:28
+28    for(int i=0;i<n-1;i++)
 (gdb) n
-2+4+6+3=15
-42  }(gdb) n
+30      printf("%d+",a[i]);
+(gdb) n
+28    for(int i=0;i<n-1;i++)
+(gdb) n
+30      printf("%d+",a[i]);
+(gdb) n
+28    for(int i=0;i<n-1;i++)
+(gdb) n
+30      printf("%d+",a[i]);
+(gdb) n
+28    for(int i=0;i<n-1;i++)
+(gdb) n
+32    printf("%d=%d\n",a[n-1],sum);
+(gdb) n
+5+7+8+8=28
+33  }
+(gdb) n
+main () at p7final.c:42
+42  }(gdb)
