@@ -15,7 +15,7 @@ int cmp(int a,int b,int c)
   {
     return c;
   }
-}
+  }
 else
  {
   if(b>c)
